@@ -8,6 +8,22 @@ public class Database {
     private List<Course> courseList = new ArrayList<>();
     private String schoolInfo;
 
+    public Database(){
+
+ /*       studentList.add(test1);
+        studentList.add(test2);
+
+        test1.addCourses(course1);
+
+        course1.addStudent(test1);
+        course1.addStudent(test2);
+
+        courseList.add(course1);
+        teacherList.add(sigrun);*/
+    }
+
+
+
     public void addCourse(Course course){
         courseList.add(course);
     }
@@ -55,17 +71,5 @@ public class Database {
 
     Course course1 = new Course("Sexualkunskap", teachers);
 
-    public Database(){
 
- /*       studentList.add(test1);
-        studentList.add(test2);
-
-        test1.addCourses(course1);
-
-        course1.addStudent(test1);
-        course1.addStudent(test2);
-
-        courseList.add(course1);
-        teacherList.add(sigrun);*/
-    }
 }

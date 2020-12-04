@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by Christoffer Grännby
@@ -7,16 +8,25 @@ import javax.swing.*;
  * Project: NoobGruppen
  * Copyright: MIT
  */
-public class UserLoggedIn {
+public class UserLoggedIn extends JFrame{
 
     private JLabel schoolInfo;
-    private JLabel searchField;
+    private JTextArea searchField;
     private JButton courseSearch;
     private JButton teacherSearch;
     private JButton studentSearch;
     private JButton clearTextArea;
     private JTextField textField;
-    // EN JÄVLA MASSA GUI
+    private JPanel bottomPanel;
+    private JPanel northPanel;
+
+
+    public UserLoggedIn(){
+        bottomPanel.setLayout(new BorderLayout());
+        northPanel.setLayout(new BorderLayout());
+
+
+    }
 
 
 }
