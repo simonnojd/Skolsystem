@@ -11,12 +11,13 @@ public class Database {
     public void addCourse(Course course){
         courseList.add(course);
     }
+
     public void addStudent(Person student){
-        this.students = students;
+        this.students.addPerson(student);
     }
 
     public void addTeacher(Person teacher){
-        this.teachers = teachers;
+        this.teachers.addPerson(teacher);
     }
 
     public Course searchCourse(String string){
@@ -52,7 +53,6 @@ public class Database {
             System.out.println(courseList.get(0).getCourseStudentList().get(i).getName());
         }
     }
-
 
     public Database(){
 
