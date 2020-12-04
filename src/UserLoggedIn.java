@@ -1,13 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by Christoffer Grännby
- * Date: 2020-12-04
- * Time: 13:48
- * Project: NoobGruppen
- * Copyright: MIT
- */
 public class UserLoggedIn extends JFrame{
 
     private JLabel schoolInfo = new JLabel("Välkommen till Nackademin!");
@@ -24,6 +17,7 @@ public class UserLoggedIn extends JFrame{
 
 
     public UserLoggedIn(){
+
         bottomPanel.setLayout(new BorderLayout());
         northPanel.setLayout(new BorderLayout());
         southPanel.setLayout(new GridLayout(2, 2));
@@ -52,6 +46,4 @@ public class UserLoggedIn extends JFrame{
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-
-
 }

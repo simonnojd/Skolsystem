@@ -3,5 +3,7 @@ public class Main {
         Database d = new Database();
         System.out.println(d.searchCourse("Biologi"));
 
+        UserLoggedIn u = new UserLoggedIn();
+
     }
 }
