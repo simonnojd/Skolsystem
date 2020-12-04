@@ -3,20 +3,21 @@ import java.util.List;
 
 public class Database {
 
-    private Person students;
-    private Person teachers;
+    private Person students = new Person();
+    private Person teachers = new Person();
     private List<Course> courseList = new ArrayList<>();
     private String schoolInfo;
 
     public void addCourse(Course course){
         courseList.add(course);
     }
+
     public void addStudent(Person student){
-        this.students = students;
+        this.students.addPerson(student);
     }
 
     public void addTeacher(Person teacher){
-        this.teachers = teachers;
+        this.teachers.addPerson(teacher);
     }
 
     public Course searchCourse(String string){
@@ -52,8 +53,6 @@ public class Database {
             System.out.println(courseList.get(0).getCourseStudentList().get(i).getName());
         }
     }
-
-    Course course1 = new Course("Sexualkunskap", teachers);
 
     public Database(){
 
