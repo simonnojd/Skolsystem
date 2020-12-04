@@ -21,7 +21,6 @@ public class UserLoggedIn extends JFrame{
     private JPanel northPanel = new JPanel();
     private JPanel southPanel = new JPanel();
     private JPanel centerPanel = new JPanel();
-    // private JPanel westPanel =  new JPanel();
 
 
     public UserLoggedIn(){
@@ -29,7 +28,6 @@ public class UserLoggedIn extends JFrame{
         northPanel.setLayout(new BorderLayout());
         southPanel.setLayout(new GridLayout(2, 2));
         centerPanel.setLayout(new BorderLayout());
-
 
         bottomPanel.add(northPanel, BorderLayout.NORTH);
         bottomPanel.add(southPanel, BorderLayout.SOUTH);
