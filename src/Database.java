@@ -11,13 +11,12 @@ public class Database {
     public void addCourse(Course course){
         courseList.add(course);
     }
-
     public void addStudent(Person student){
-        this.students.addPerson(student);
+        this.students = students;
     }
 
     public void addTeacher(Person teacher){
-        this.teachers.addPerson(teacher);
+        this.teachers = teachers;
     }
 
     public Course searchCourse(String string){
@@ -53,6 +52,7 @@ public class Database {
             System.out.println(courseList.get(0).getCourseStudentList().get(i).getName());
         }
     }
+
 
     public Database(){
 
@@ -101,20 +101,5 @@ public class Database {
         courseFour.addStudent(studentFour);
         courseFour.addStudent(studentFive);
         courseFour.addStudent(studentOne);
-
-
-
-
-
- /*       studentList.add(test1);
-        studentList.add(test2);
-
-        test1.addCourses(course1);
-
-        course1.addStudent(test1);
-        course1.addStudent(test2);
-
-        courseList.add(course1);
-        teacherList.add(sigrun);*/
     }
 }
