@@ -28,7 +28,6 @@ public class Database {
         }
         return null;
     }
-
     public Person searchTeacher(String string){
         for (Person person : teachers.getPersons()) {
             if (string.equalsIgnoreCase(person.getName())){
@@ -47,12 +46,6 @@ public class Database {
         return null;
     }
 
-    public void printCourse(){
-        System.out.println(courseList.get(0).getTeacher());
-        for (int i = 0; i < courseList.get(0).getCourseStudentList().size(); i++) {
-            System.out.println(courseList.get(0).getCourseStudentList().get(i).getName());
-        }
-    }
 
     public Database(){
 
