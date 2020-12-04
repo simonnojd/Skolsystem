@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Person {
+public class Person {
 
     private String name;
     private String age;
