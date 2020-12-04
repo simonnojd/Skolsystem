@@ -4,10 +4,10 @@ import java.util.List;
 public class Course {
 
     private String name;
-    private List<Student> courseStudentList = new ArrayList<>();
-    private Teacher teacher;
+    private List<Person> courseStudentList = new ArrayList<>();
+    private Person teacher;
 
-    public Course(String name, Teacher teacher) {
+    public Course(String name, Person teacher) {
         this.name = name;
         this.teacher = teacher;
     }
@@ -16,17 +16,17 @@ public class Course {
         return name;
     }
 
-    public List<Student> getCourseStudentList() {
+    public List<Person> getCourseStudentList() {
         return courseStudentList;
     }
 
-    public Teacher getTeacher() {
+    public Person getTeacher() {
         return teacher;
     }
 
     private String getStudentsInCourse(){
         String string = "";
-        for (Student s: courseStudentList) {
+        for (Person s: courseStudentList) {
             string += s.getName() + "\n";
         }
         return string;
@@ -41,7 +41,7 @@ public class Course {
                 '}';
     }
 
-    public void addStudent(Student student){
+    public void addStudent(Person student){
         courseStudentList.add(student);
     }
 }

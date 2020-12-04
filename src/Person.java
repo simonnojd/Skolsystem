@@ -8,6 +8,8 @@ public abstract class Person {
     private String mail;
     private String number;
 
+    public Person (){}
+
     public Person(String name, String age, String mail, String number) {
         this.name = name;
         this.age = age;
@@ -16,6 +18,8 @@ public abstract class Person {
     }
 
     private List<Course> courseList = new ArrayList<>();
+
+    private List<Person> personList = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -33,8 +37,8 @@ public abstract class Person {
         return number;
     }
 
-    public List<Course> getCourseList() {
-        return courseList;
+    public void addPerson(Person person){
+        personList.add(person);
     }
 
     public void addCourses(Course course){
@@ -43,5 +47,9 @@ public abstract class Person {
 
     public List<Course> getCourses(){
         return courseList;
+    }
+
+    public List<Person> getPersons(){
+        return personList;
     }
 }
