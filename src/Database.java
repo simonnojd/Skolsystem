@@ -21,27 +21,27 @@ public class Database {
     }
 
     public Course searchCourse(String string){
-        for (Course c : courseList) {
-            if (string.equalsIgnoreCase(c.getName())){
-                return c;
+        for (Course course : courseList) {
+            if (string.equalsIgnoreCase(course.getName())){
+                return course;
             }
         }
         return null;
     }
 
     public Person searchTeacher(String string){
-        for (Person t : teachers.getPersons()) {
-            if (string.equalsIgnoreCase(t.getName())){
-                return t;
+        for (Person person : teachers.getPersons()) {
+            if (string.equalsIgnoreCase(person.getName())){
+                return person;
             }
         }
         return null;
     }
 
     public Person searchStudent(String string){
-        for (Person s : students.getPersons()) {
-            if (string.equalsIgnoreCase(s.getName())){
-                return s;
+        for (Person person : students.getPersons()) {
+            if (string.equalsIgnoreCase(person.getName())){
+                return person;
             }
         }
         return null;
@@ -81,7 +81,7 @@ public class Database {
         addStudent(studentTwo);
         addStudent(studentThree);
         addStudent(studentFour);
-        addStudent(studentThree);
+        addStudent(studentFive);
 
         addTeacher(teacherOne);
         addTeacher(teacherThree);
