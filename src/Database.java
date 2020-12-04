@@ -6,7 +6,6 @@ public class Database {
     private Person students = new Person();
     private Person teachers = new Person();
     private List<Course> courseList = new ArrayList<>();
-    private String schoolInfo;
 
     public void addCourse(Course course){
         courseList.add(course);

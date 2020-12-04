@@ -7,11 +7,11 @@ public class UserLoggedIn extends JFrame {
 
     Database d = new Database();
 
-    private JLabel schoolInfo = new JLabel("Välkommen till Nackademin!");
-    private JTextArea infoField = new JTextArea("Info......");
+    private JTextArea infoField = new JTextArea();
     private JButton courseSearch = new JButton("Sök efter kurser");
     private JButton teacherSearch = new JButton("Sök efter lärare");
     private JButton studentSearch = new JButton("Sök efter elever");
+    private JButton infoButton = new JButton("Tryck för info om skolan");
     private JTextField searchField = new JTextField("Sök här");
     private JPanel bottomPanel = new JPanel();
     private JPanel northPanel = new JPanel();
@@ -30,14 +30,15 @@ public class UserLoggedIn extends JFrame {
         bottomPanel.add(southPanel, BorderLayout.SOUTH);
         bottomPanel.add(centerPanel, BorderLayout.CENTER);
 
-        northPanel.add(schoolInfo, BorderLayout.NORTH);
-
         southPanel.add(teacherSearch);
         southPanel.add(studentSearch);
         southPanel.add(courseSearch);
+        southPanel.add(infoButton);
 
         centerPanel.add(infoField, BorderLayout.NORTH);
         centerPanel.add(searchField, BorderLayout.SOUTH);
+        centerPanel.setBackground(Color.WHITE);
+        infoField.setFont(new Font("Monaco", Font.PLAIN, 18));
 
         infoField.setEditable(false);
 
@@ -55,7 +56,6 @@ public class UserLoggedIn extends JFrame {
                     infoField.setText("Kursen finns inte");
                 else infoField.setText(course.toString());
             }
-            searchField.setText("Sök här");
         });
 
         studentSearch.addActionListener(e->{
@@ -65,7 +65,6 @@ public class UserLoggedIn extends JFrame {
                 infoField.setText("Eleven finns inte");
                 else infoField.setText(student.toString());
             }
-            searchField.setText("Sök här");
         });
 
         teacherSearch.addActionListener(e->{
@@ -76,7 +75,14 @@ public class UserLoggedIn extends JFrame {
                 infoField.setText("Läraren finns inte");
                 else infoField.setText(teacher.toString());
             }
-            searchField.setText("Sök här");
+        });
+
+        infoButton.addActionListener(e->{
+            infoField.setText("Välkommen till Noob skolan!" +
+                    "\nDu kan hitta oss på Noobgatan 69" +
+                    "\n------------------Kontakt------------------\n" +
+                    "Telefonnummer: 0704955146\n" +
+                    "Mail: n00bSkolan@n00bSchool.n00b");
         });
 
         searchField.addKeyListener(new KeyAdapter() {
