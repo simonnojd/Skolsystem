@@ -102,19 +102,5 @@ public class Database {
         courseFour.addStudent(studentFive);
         courseFour.addStudent(studentOne);
 
-
-
-
-
- /*       studentList.add(test1);
-        studentList.add(test2);
-
-        test1.addCourses(course1);
-
-        course1.addStudent(test1);
-        course1.addStudent(test2);
-
-        courseList.add(course1);
-        teacherList.add(sigrun);*/
     }
 }
