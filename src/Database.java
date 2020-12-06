@@ -44,6 +44,56 @@ public class Database {
         }
         return null;
     }
+    public String printCourse(String courseToSearchAndPrint){
+        String textToPrint = null;
+
+        for (Course c : courseList){
+            if (courseToSearchAndPrint.equalsIgnoreCase(c.getName())){
+                textToPrint = "Kurs: " + c.getName() + "\n" + "Lärare: " + c.getTeacher().getName() + "\n" + "Studenter: ";
+                for (Person p : c.getCourseStudentList()){
+                    textToPrint += "\n" + p.getName();
+                }
+            }
+        }
+
+        return textToPrint;
+    }
+
+    public String printTeacher(String teacherToSearchAndPrint){
+        String textToPrint = null;
+
+        for (Course c : courseList){
+            if (teacherToSearchAndPrint.equalsIgnoreCase(c.getTeacher().getName())){
+                if (textToPrint == null){
+                    textToPrint = c.getTeacher().getName() + " är lärare över de här eleverna: ";
+                }
+                for (Person p : c.getCourseStudentList()){
+                    textToPrint += "\n" + p.getName();
+                }
+            }
+        }
+        return textToPrint;
+    }
+
+    public String printStudent(String studentToSearchAndPrint){
+        String textToPrint = null;
+
+        for (Course c : courseList){
+            for (Person p : c.getCourseStudentList()){
+                if (studentToSearchAndPrint.equalsIgnoreCase(p.getName())){
+                    if (textToPrint == null){
+                        textToPrint = p.getName() + " går på dom här kurserna: ";
+                    }
+                    textToPrint += "\n" + c.getName();
+                }
+            }
+        }
+
+
+        return textToPrint;
+    }
+
+
 
 
     public Database(){

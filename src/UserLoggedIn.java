@@ -54,7 +54,7 @@ public class UserLoggedIn extends JFrame {
                 Course course = d.searchCourse(searchField.getText());
                 if (course == null)
                     infoField.setText("Kursen finns inte");
-                else infoField.setText(course.toString());
+                else infoField.setText(d.printCourse(searchField.getText()));
             }
         });
 
@@ -63,7 +63,7 @@ public class UserLoggedIn extends JFrame {
                 Person student = d.searchStudent(searchField.getText());
                 if (student == null)
                 infoField.setText("Eleven finns inte");
-                else infoField.setText(student.toString());
+                else infoField.setText(d.printStudent(searchField.getText()));
             }
         });
 
@@ -73,7 +73,7 @@ public class UserLoggedIn extends JFrame {
                 Person teacher = d.searchTeacher(searchField.getText());
                 if (teacher == null)
                 infoField.setText("Läraren finns inte");
-                else infoField.setText(teacher.toString());
+                else infoField.setText(d.printTeacher(searchField.getText()));
             }
         });
 
