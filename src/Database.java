@@ -61,33 +61,73 @@ public class Database {
 
     public String printTeacher(String teacherToSearchAndPrint){
         String textToPrint = null;
+        Person teacherName = null;
 
+        for (Course cor : courseList){
+            if (teacherToSearchAndPrint.equalsIgnoreCase(cor.getTeacher().getName())){
+                teacherName = cor.getTeacher();
+            }
+        }
+
+        textToPrint = "Namn: " + teacherName.getName() + "\n" + "Ålder: " + teacherName.getAge() + "\n" + "Mail: " + teacherName.getMail() + "\n" + "Telefonnummer: " + teacherName.getNumber();
+
+
+
+        textToPrint += "\n" + teacherName.getName() + " utbildar i de här kurserna: ";
+        for (Course co : courseList){
+            if (teacherToSearchAndPrint.equalsIgnoreCase(co.getTeacher().getName())){
+
+                textToPrint += "\n" + co.getName();
+            }
+        }
+
+        textToPrint += "\n" +  teacherName.getName() + " är lärare över de här eleverna: ";
         for (Course c : courseList){
             if (teacherToSearchAndPrint.equalsIgnoreCase(c.getTeacher().getName())){
-                if (textToPrint == null){
-                    textToPrint = c.getTeacher().getName() + " är lärare över de här eleverna: ";
-                }
+
                 for (Person p : c.getCourseStudentList()){
-                    textToPrint += "\n" + p.getName();
+                    if (!textToPrint.contains(p.getName())){
+                        textToPrint += "\n" + p.getName();
+                    }
                 }
             }
         }
+
         return textToPrint;
     }
 
     public String printStudent(String studentToSearchAndPrint){
         String textToPrint = null;
+        Person studentName = null;
 
         for (Course c : courseList){
             for (Person p : c.getCourseStudentList()){
                 if (studentToSearchAndPrint.equalsIgnoreCase(p.getName())){
-                    if (textToPrint == null){
-                        textToPrint = p.getName() + " går på dom här kurserna: ";
-                    }
+                    studentName = p;
+                }
+            }
+        }
+
+        textToPrint = "Namn: " + studentName.getName() + "\n" + "Ålder: " + studentName.getAge() + "\n" + "Mail: " + studentName.getMail() + "\n" + "Telefonnummer: " + studentName.getNumber();
+
+        textToPrint += "\n" +  studentName.getName() + " går på dom här kurserna: ";
+        for (Course c : courseList){
+            for (Person p : c.getCourseStudentList()){
+                if (studentToSearchAndPrint.equalsIgnoreCase(p.getName())){
                     textToPrint += "\n" + c.getName();
                 }
             }
         }
+        textToPrint += "\n"+  studentName.getName() + " blir utbildad av de här lärarna: ";
+
+        for (Course co : courseList){
+            for (Person p : co.getCourseStudentList()){
+                if (studentToSearchAndPrint.equalsIgnoreCase(p.getName())){
+                    textToPrint += "\n" + co.getTeacher().getName();
+                }
+            }
+        }
+
 
 
         return textToPrint;
