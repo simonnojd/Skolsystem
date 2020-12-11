@@ -154,6 +154,26 @@ public class Database {
         Person studentFour = new Person("Kalle", "15" , "kalle@mail.com", "654165131");
         Person studentFive = new Person("Sossen", "14","sosse@sosse.se", "6541321321");
 
+        teacherOne.addCourses(courseFour);
+        teacherTwo.addCourses(courseThree);
+        teacherThree.addCourses(courseOne);
+        teacherFour.addCourses(courseTwo);
+
+        studentOne.addCourses(courseOne);
+        studentOne.addCourses(courseFour);
+        studentOne.addCourses(courseThree);
+
+        studentTwo.addCourses(courseOne);
+
+        studentThree.addCourses(courseOne);
+        studentThree.addCourses(courseTwo);
+
+        studentFour.addCourses(courseFour);
+
+        studentFive.addCourses(courseTwo);
+        studentFive.addCourses(courseThree);
+        studentFive.addCourses(courseFour);
+
         addCourse(courseOne);
         addCourse(courseTwo);
         addCourse(courseThree);
