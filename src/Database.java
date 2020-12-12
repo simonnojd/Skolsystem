@@ -143,7 +143,7 @@ public class Database {
         Person teacherThree = new Person("Anders", "51", "Anders@mail.com","0735654655");
         Person teacherFour = new Person("Lars", "30","Lars@mail.com","073565465");
 
-        Course courseOne = new Course("Sexualkunskap", teacherThree);
+        Course courseOne = new Course("Svenska", teacherThree);
         Course courseTwo = new Course("Java",teacherFour);
         Course courseThree = new Course("Matematik", teacherTwo);
         Course courseFour = new Course("Idrott", teacherOne);
@@ -152,7 +152,7 @@ public class Database {
         Person studentTwo = new Person("Simon","12","simon_kool@mail.com", "0756516516");
         Person studentThree = new Person("Daniel", "13", "daniel_small@mail.com","98446512");
         Person studentFour = new Person("Kalle", "15" , "kalle@mail.com", "654165131");
-        Person studentFive = new Person("Sossen", "14","sosse@sosse.se", "6541321321");
+        Person studentFive = new Person("Elias", "14","elias@mail.se", "6541321321");
 
         teacherOne.addCourses(courseFour);
         teacherTwo.addCourses(courseThree);

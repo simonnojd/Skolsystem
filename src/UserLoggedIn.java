@@ -78,11 +78,11 @@ public class UserLoggedIn extends JFrame {
         });
 
         infoButton.addActionListener(e->{
-            infoField.setText("Välkommen till Noob skolan!" +
-                    "\nDu kan hitta oss på Noobgatan 69" +
+            infoField.setText("Välkommen till Nackamagin!" +
+                    "\nDu kan hitta oss på exempelgatan 12" +
                     "\n------------------Kontakt------------------\n" +
-                    "Telefonnummer: 0704955146\n" +
-                    "Mail: n00bSkolan@n00bSchool.n00b");
+                    "Telefonnummer: 0738347612\n" +
+                    "Mail: nackamagin@gmail.com");
         });
 
         searchField.addKeyListener(new KeyAdapter() {
