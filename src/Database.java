@@ -128,20 +128,15 @@ public class Database {
             }
         }
 
-
-
         return textToPrint;
     }
 
-
-
-
     public Database(){
 
-        Person teacherOne = new Person("Steffe", "40","Steffe@mail.com","0737856513");
-        Person teacherTwo = new Person("Cribb", "65", "Cribb@cribb.net", "8844556644");
-        Person teacherThree = new Person("Anders", "51", "Anders@mail.com","0735654655");
-        Person teacherFour = new Person("Lars", "30","Lars@mail.com","073565465");
+        Teacher teacherOne = new Teacher("Steffe", "40","Steffe@mail.com","0737856513");
+        Teacher teacherTwo = new Teacher("Cribb", "65", "Cribb@cribb.net", "8844556644");
+        Teacher teacherThree = new Teacher("Anders", "51", "Anders@mail.com","0735654655");
+        Teacher teacherFour = new Teacher("Lars", "30","Lars@mail.com","073565465");
 
         Course courseOne = new Course("Sexualkunskap", teacherThree);
         Course courseTwo = new Course("Java",teacherFour);

@@ -1,12 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Person {
 
-    private String name;
-    private String age;
-    private String mail;
-    private String number;
+    protected String name;
+    protected String age;
+    protected String mail;
+    protected String number;
 
     public Person(){}
 
